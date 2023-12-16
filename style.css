@@ -28,14 +28,6 @@ h1 {
     
 }
 
-.default {
-    display: flex;
-    flex: 1 1 auto;
-    width: 16px;
-    height: 16px;
-    background-color: red;
-}
-
 .new {
     background-color: green;
     display: flex;
@@ -44,4 +36,9 @@ h1 {
 
 .draw {
     background-color: black;
+}
+
+.clear {
+    font-size: 24px;
+    margin-left: 10px;
 }
