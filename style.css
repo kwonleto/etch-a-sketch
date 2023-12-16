@@ -22,22 +22,26 @@ h1 {
 .container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     width: 600px;
     height: 600px;
+    
 }
 
-/*.grid {
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: repeat(4, 1fr);
-    border: 1px solid black;
-    width: 400px;
-    height: 400px;
-  }*/
-
-
 .default {
+    display: flex;
+    flex: 1 1 auto;
     width: 16px;
     height: 16px;
     background-color: red;
+}
+
+.new {
+    background-color: green;
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.draw {
+    background-color: black;
 }
