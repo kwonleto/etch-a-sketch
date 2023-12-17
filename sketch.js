@@ -2,6 +2,7 @@ let inputSize = 16;
 const container = document.querySelector('.container');
 const btn = document.querySelector('.btn');
 const clear = document.querySelector('.clear');
+const rainbow = document.querySelector('.rainbow');
 
 btn.addEventListener('click', () => {
     inputSize = prompt("Enter a new size between 10 to 100");
@@ -34,6 +35,16 @@ function makeGrid(size) {
     }
 } 
 
+rainbow.addEventListener('click', () => {
+    const coloured = document.querySelectorAll('.new');
+    coloured.forEach(div => {
+        div.addEventListener('mousemove', (e) => { 
+            if(e.buttons == 1)
+            e.target.style.backgroundColor = randomColor();
+        });
+    });
+});
+
 makeGrid(inputSize);
 
 clear.addEventListener('click', () => {
@@ -42,13 +53,12 @@ clear.addEventListener('click', () => {
 });
 
 
-/*const draw = document.querySelectorAll('.default');
-draw.forEach(div => {
-    div.addEventListener('mousemove', (e) => {
-        if(e.buttons == 1)
-        div.style.cssText = "background-color: black;"
-    });
-});*/
+function randomColor() {
+    const randomR = Math.floor(Math.random() * 256);
+    const randomG = Math.floor(Math.random() * 256);
+    const randomB = Math.floor(Math.random() * 256);
+    return `rgb(${randomR}, ${randomG}, ${randomB})`;
+}
 
 
 
